@@ -1,0 +1,866 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: poppins;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Main Section */
+#main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.02);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #ffffff;
+}
+.logo img {
+  height: 45px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0px 22px;
+  display: flex;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #585b5b;
+  letter-spacing: 1px;
+}
+.hey {
+  color: #39bfbd;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #40c6c4;
+}
+nav ul li a:hover {
+  background-color: #2adabc;
+  color: #ffffff;
+  box-shadow: 5px 10px 30px rgba(64, 198, 196, 0.3);
+  transition: all ease 0.2s;
+}
+/*Mobile-menu icon*/
+nav .menu-btn,
+.menu-icon {
+  display: none;
+}
+
+.content {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.model {
+  width: 500px;
+  height: 500px;
+}
+.model img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.main-text {
+  width: 500px;
+}
+.main-text h1 {
+  font-size: 2.5rem;
+  color: #1c3548;
+  margin: 0px 0px 10px 0px;
+  line-height: 60px;
+  background-image: url(https://thumbs.gfycat.com/HomelyBewitchedItaliangreyhound-size_restricted.gif);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.main-text span {
+  font-family: "Sofia", cursive;
+}
+.main-text p {
+  color: #747474;
+  line-height: 1.5rem;
+}
+.main-text p span {
+  font-family: "Sofia", cursive;
+  color: #1db096;
+  font-size: 20px;
+}
+.work-btn {
+  width: 150px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #1db096;
+  border-radius: 20px;
+  box-shadow: 4px 10px 30px rgba(24, 139, 119, 0.2);
+}
+.work-btn:hover {
+  background-color: #23cdaf;
+  transition: all ease 0.2s;
+}
+@media (max-width: 1140px) {
+  .content {
+    width: 100%;
+  }
+  .model {
+    width: 400px;
+    height: 400px;
+  }
+  .main-text,
+  .model {
+    margin: 10px;
+  }
+  .main-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-icon {
+    display: block;
+  }
+  nav {
+    justify-content: space-between;
+    height: 65px;
+    padding: 0px 30px;
+  }
+  .logo img {
+    height: 35px;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    background-color: #ffffff;
+    border-bottom: 4px solid #1db096;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .menu li {
+    width: 100%;
+  }
+  nav .menu li a {
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 25px;
+    border: 1px solid rgba(38, 38, 38, 0.03);
+  }
+  nav .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  nav .menu-icon .nav-icon {
+    background-color: #333333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 18px;
+  }
+  nav .menu-icon .nav-icon:before,
+  nav .menu-icon .nav-icon:after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all ease-out 0.2s;
+    width: 100%;
+  }
+  nav .menu-icon .nav-icon:before {
+    top: 5px;
+  }
+  nav .menu-icon .nav-icon:after {
+    top: -5px;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  nav .menu-btn {
+    display: none;
+  }
+  nav .menu-btn:checked ~ .menu {
+    display: block;
+  }
+}
+@media (max-width: 720px) {
+  .model {
+    display: none;
+  }
+  .main-text {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* About Section */
+.about-container {
+  width: 80%;
+  height: 400px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin: 0% auto 20px auto;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-container img {
+  height: 250px;
+}
+.about-text {
+  width: 500px;
+}
+.about-text h2 {
+  color: #403e3e;
+  font-family: myriad pro;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 0px;
+  padding-bottom: 20px;
+}
+.about-text h3 {
+  color: #3e3d3d;
+  font-size: 20px;
+  font-family: myriad pro;
+  font-weight: bold;
+  line-height: 5px;
+  font-family: "Sofia", cursive;
+}
+.about-text p:nth-child(3),
+.about-text p:nth-child(4) {
+  color: #7e7d7d;
+  font-family: calibri;
+  font-size: 16px;
+  background-image: url(https://thumbs.gfycat.com/HomelyBewitchedItaliangreyhound-size_restricted.gif);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about-text button {
+  width: 120px;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-family: calibri;
+  color: #ffffff;
+  background-color: #1db096;
+  box-shadow: 4px 10px 30px rgba(24, 139, 119, 0.2);
+}
+.about-text button:hover {
+  background-color: #23cdaf;
+  transition: all ease 0.2s;
+}
+
+@media (max-width: 1000px) {
+  .about-container {
+    width: 90%;
+    border-radius: 10px;
+  }
+  .about-container img {
+    height: 200px;
+  }
+  .about-text {
+    width: 400px;
+  }
+  .about-text p:nth-child(1) {
+    font-size: 20px;
+  }
+  .about-text p:nth-child(2) {
+    font-size: 10px;
+  }
+
+  .about-text p:nth-child(3),
+  .about-text p:nth-child(4) {
+    font-size: 14px;
+  }
+}
+@media (max-width: 750px) {
+  .about-container {
+    top: 0px;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 30px 0px;
+    align-items: center;
+  }
+  .about-text {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+/* Skills Section */
+#skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto auto 50px auto;
+}
+.skill-text {
+  width: 400px;
+}
+.skill-heading span {
+  color: #36b7b5;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+.skill-heading h2 {
+  color: #1c3548;
+  font-size: 3.3rem;
+  margin: 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.s-box-container {
+  margin-top: 30px;
+}
+.skill-box {
+  display: flex;
+  margin: 25px 0px;
+}
+.s-box-icon {
+  margin-right: 12px;
+}
+.s-box-icon i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-size: 1.1rem;
+}
+.s-box-text strong {
+  color: #1c3548;
+  margin: 0px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.s-box-text p {
+  color: #747474;
+  font-size: 0.9rem;
+}
+.fa-html5 {
+  color: #e06061;
+}
+.fa-css3-alt {
+  color: #416cdf;
+}
+.fa-js-square {
+  color: #f98231;
+}
+.skill-img {
+  width: 600px;
+  height: 600px;
+}
+.skill-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 1140px) {
+  .skill-img {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 900px) {
+  #skills {
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 40px;
+  }
+  .skill-text {
+    width: 400px;
+  }
+  .skill-img {
+    width: 60%;
+    height: 300px;
+  }
+  .skill-img img {
+    object-fit: cover;
+    object-position: left;
+  }
+}
+@media (max-width: 530px) {
+  .skill-img {
+    display: none;
+  }
+  .skill-text {
+    width: 85%;
+  }
+  #skills {
+    margin: 0px;
+  }
+}
+
+/* Service Section */
+#service {
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto auto 50px auto;
+}
+.service-heading span {
+  color: #36b7b5;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+.service-heading h2 {
+  color: #1c3548;
+  font-size: 3.3rem;
+  margin: 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Sofia", cursive;
+  background-image: url(https://thumbs.gfycat.com/HomelyBewitchedItaliangreyhound-size_restricted.gif);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.services {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+.services .service {
+  padding: 30px;
+}
+.services .service:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.services .service .icon img {
+  max-width: 100px;
+}
+.services .service h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #1b206e;
+}
+@media (max-width: 1068px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .services .service {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Work Section */
+#work {
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto auto 50px auto;
+}
+.work-heading span {
+  color: #36b7b5;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+.work-heading h2 {
+  color: #1c3548;
+  font-size: 3.3rem;
+  margin: 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Sofia", cursive;
+  background-image: url(https://thumbs.gfycat.com/HomelyBewitchedItaliangreyhound-size_restricted.gif);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.portfolio .item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+}
+.portfolio .item img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio .item .action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.portfolio .item:hover .action {
+  opacity: 1;
+}
+.portfolio .item .action a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+}
+@media (max-width: 1068px) {
+}
+
+/* Client Section */
+#client {
+  width: 100%;
+  border-top: 1px solid rgba(58, 58, 58, 0.03);
+  border-bottom: 1px solid rgba(58, 58, 58, 0.03);
+  padding: 50px 0px;
+  background-image: url("../images/Client_img/bg.png");
+  background-position: center;
+  background-size: 1000px;
+}
+.client-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.client-heading span {
+  color: #36b7b5;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+.client-heading h3 {
+  color: #1c3548;
+  font-size: 3rem;
+  margin: 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Sofia", cursive;
+  background-image: url(https://thumbs.gfycat.com/HomelyBewitchedItaliangreyhound-size_restricted.gif);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.c-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+}
+.client-box {
+  width: 310px;
+  height: 350px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
+}
+.client-box img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.client-box strong {
+  color: #1c3548;
+  margin: 0px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.star {
+  display: flex;
+  margin: 10px 0px 10px 0px;
+}
+.star i {
+  color: #ff9529;
+}
+.client-box p {
+  color: #747474;
+  font-size: 0.9rem;
+  margin: 0px;
+  text-align: center;
+  display: block;
+  display: -webkit-box;
+  max-width: 80%;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.client-box a {
+  width: 190px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #1db096;
+  border-radius: 20px;
+  box-shadow: 4px 10px 30px rgba(24, 139, 119, 0.2);
+}
+.client-box a {
+  width: 140px;
+  margin-top: 20px;
+  border-radius: 0px;
+}
+.client-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: #23cdaf;
+  transition: all ease 0.2s;
+}
+@media (max-width: 1140px) {
+  .client-box {
+    flex-grow: 0.5;
+  }
+}
+@media (max-width: 900px) {
+}
+
+/* Contact Section */
+#contact {
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto auto 50px auto;
+}
+.contact-heading span {
+  color: #36b7b5;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+.contact-heading h2 {
+  color: #1c3548;
+  font-size: 3.3rem;
+  margin: 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Sofia", cursive;
+  background-image: url(https://thumbs.gfycat.com/HomelyBewitchedItaliangreyhound-size_restricted.gif);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.contact {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contact-form {
+  position: relative;
+  background: #f9f9f9;
+  width: calc(100% - 400px);
+  padding: 60px 40px 20px;
+}
+.contact-form form {
+  width: 100%;
+}
+.contact-form .row {
+  width: 100%;
+  display: flex;
+}
+.contact-form .input50 {
+  width: 50%;
+  margin: 0 10px;
+}
+.contact-form .input100 {
+  width: 100%;
+  margin: 0 10px;
+}
+.contact-form .row input,
+.contact-form .row textarea {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #111;
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+  resize: none;
+}
+.contact-form .row textarea {
+  height: 150px;
+}
+.contact-form .row input[type="submit"] {
+  color: #ffffff;
+  background-color: #1db096;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 4px 10px 30px rgba(24, 139, 119, 0.2);
+}
+.contact-form .row input[type="submit"]:hover {
+  background-color: #23cdaf;
+  transition: all ease 0.2s;
+}
+
+.contact-info {
+  width: 350px;
+  background: #f9f9f9;
+  padding: 60px 40px 20px;
+}
+.contact-info .info-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.contact-info .info-box .contact-icon {
+  width: 20px;
+  margin-right: 40px;
+}
+.contact-info .info-box .details {
+  margin-top: -20px;
+}
+.contact-info .info-box .details h4 {
+  color: blueviolet;
+}
+.contact-info .info-box .details p,
+.contact-info .info-box .details a {
+  color: #111;
+}
+
+@media (max-width: 1068px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 30px 30px 20px;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+
+  .contact-form .input50,
+  .contact-form .input100 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px 30px 20px;
+  }
+}
+@media (max-width: 530px) {
+  .contact-input {
+    width: 90%;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(232, 232, 232, 0.5);
+  background-color: #ffffff;
+}
+footer p {
+  margin: 15px 0px;
+  color: #5f5f5f;
+  font-size: 0.9rem;
+}
+@media (max-width: 720px) {
+  footer {
+    justify-content: center;
+    padding: 10px 20px;
+  }
+  footer p {
+    text-align: center;
+  }
+}
