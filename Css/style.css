@@ -338,6 +338,11 @@ nav .menu-btn,
     text-align: center;
   }
 }
+@media (max-width: 420px) {
+  .about-text h3 {
+    line-height: 1.5rem;
+  }
+}
 
 /* Skills Section */
 #skills {
